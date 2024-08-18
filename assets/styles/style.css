@@ -884,7 +884,7 @@ button span {
           transition: text-shadow 0.3s;
 
           &:hover {
-            text-shadow: 2px 3px aqua;
+            text-shadow: 2px 3px #00ffff;
           }
         }
 
@@ -908,97 +908,76 @@ button span {
 }
 
 /* MEDIA QUERIES */
-@media (max-width: 1200px) {
-  .container-header header {
-    padding: 10px 15px;
+@media screen and (max-width:980px) {
+  nav {
+    display: none;
   }
 
-  .container-header header .logo a {
-    font-size: 28px;
+  .nav-responsive {
+    display: block;
   }
 
-  .container-header header nav ul li a {
-    margin: 0 10px;
+  nav.responsive {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 75px;
+    background-color: #1f233b;
+    width: 180px;
   }
 
-  .about,
-  .skills,
-  .projects,
-  .contact {
-    padding: 4rem 2rem;
+  nav.responsive ul {
+    display: block !important;
   }
+
+  nav.responsive ul li {
+    border-bottom: 1px solid #00ffff;
+    padding: 10px 0;
+  }
+
 }
 
-@media (max-width: 768px) {
-  .container-header header {
-    flex-direction: column;
-    align-items: flex-start;
+@media screen and (max-width:700px) {
+  .about .home__info {
+    display: block;
   }
 
-  .container-header header ul {
-    flex-direction: column;
-    padding-top: 10px;
+  .about .networks {
+    width: fit-content;
   }
 
-  .container-header header nav ul li a {
-    margin: 5px 0;
+  .skills {
+    padding: 3rem 1em;
   }
 
-  .about,
-  .skills,
-  .projects,
-  .contact {
-    padding: 3rem 1rem;
+  .card {
+    width: 30vw;
+    height: 40vh;
+    font-size: 3vw;
   }
 
-  .contact__container {
-    flex-direction: column;
-    align-items: center;
+  .icon {
+    font-size: 7vw;
   }
 
-  .contact__form,
-  .contact__info {
-    max-width: 100%;
-    padding: 1rem;
+  .projects .container-projects-galeria {
+    display: block;
+    width: 100%;
   }
 }
 
 @media (max-width: 480px) {
-  .container-header header {
-    padding: 10px 5px;
+  .skills {
+    padding: 2rem 0.5em;
   }
 
-  .container-header header .logo a {
-    font-size: 24px;
+  .card {
+    width: 40vw;
+    height: 50vh;
+    font-size: 4vw;
   }
 
-  .container-header header nav ul {
-    flex-direction: column;
-  }
-
-  .container-header header nav ul li a {
-    margin: 5px 0;
-  }
-
-  .about,
-  .skills,
-  .projects,
-  .contact {
-    padding: 2rem 0.5rem;
-  }
-
-  .contact__container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .contact__info,
-  .contact__form {
-    max-width: 100%;
-    padding: 1rem;
-  }
-
-  .footer {
-    padding: 1rem;
+  .icon {
+    font-size: 9vw;
   }
 }
